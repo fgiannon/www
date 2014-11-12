@@ -1,0 +1,109 @@
+francogiannoni@ubuntu:~$ git config --global credential.helper cache
+francogiannoni@ubuntu:~$ git config --global credential.helper 'cache --timeout=3600'
+francogiannoni@ubuntu:~$ git config --list
+user.name=fgiannon
+user.email=fran.giannoni93@gmail.com
+credential.helper=cache --timeout=3600
+francogiannoni@ubuntu:~$ git config --global color.diff auto
+francogiannoni@ubuntu:~$ git config --global color.status auto
+francogiannoni@ubuntu:~$ git config --global color.branch auto
+francogiannoni@ubuntu:~$ git clone https://github.com/fgiannon/www.git
+Cloning into 'www'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+francogiannoni@ubuntu:~$ cd www/
+francogiannoni@ubuntu:~/www$ ^C
+francogiannoni@ubuntu:~/www$ ls
+README.md
+francogiannoni@ubuntu:~/www$ gedit hola.c
+francogiannoni@ubuntu:~/www$ gedit info.txt
+francogiannoni@ubuntu:~/www$ ls -al
+total 24
+drwxr-xr-x  3 francogiannoni francogiannoni 4096 Nov 12 10:14 .
+drwxr-xr-x 32 francogiannoni francogiannoni 4096 Nov 12 10:08 ..
+drwxrwxr-x  8 francogiannoni francogiannoni 4096 Nov 12 10:08 .git
+-rw-rw-r--  1 francogiannoni francogiannoni   66 Nov 12 10:14 hola.c
+-rw-rw-r--  1 francogiannoni francogiannoni    5 Nov 12 10:14 info.txt
+-rw-rw-r--  1 francogiannoni francogiannoni   14 Nov 12 10:08 README.md
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hola.c
+#	info.txt
+nothing added to commit but untracked files present (use "git add" to track)
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ git commit
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hola.c
+#	info.txt
+nothing added to commit but untracked files present (use "git add" to track)
+francogiannoni@ubuntu:~/www$ git commit
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hola.c
+#	info.txt
+nothing added to commit but untracked files present (use "git add" to track)
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ 
+francogiannoni@ubuntu:~/www$ git commit
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hola.c
+#	info.txt
+nothing added to commit but untracked files present (use "git add" to track)
+francogiannoni@ubuntu:~/www$ git commit -m ssss
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hola.c
+#	info.txt
+nothing added to commit but untracked files present (use "git add" to track)
+francogiannoni@ubuntu:~/www$ git add .
+francogiannoni@ubuntu:~/www$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   hola.c
+#	new file:   info.txt
+#
+francogiannoni@ubuntu:~/www$ git commit
+[master 657792e] mi primera version
+ 2 files changed, 8 insertions(+)
+ create mode 100644 hola.c
+ create mode 100644 info.txt
+francogiannoni@ubuntu:~/www$ git commit
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+francogiannoni@ubuntu:~/www$ git push origin master
+Username for 'https://github.com': fgiannon
+Password for 'https://fgiannon@github.com': 
+To https://github.com/fgiannon/www.git
+   efc7fe1..657792e  master -> master
+francogiannoni@ubuntu:~/www$ git status
+# On branch master
+nothing to commit (working directory clean)
+francogiannoni@ubuntu:~/www$ ls
+hola.c  info.txt  README.md
+francogiannoni@ubuntu:~/www$ gedit hola.c
+francogiannoni@ubuntu:~/www$ gedit como_usar_git.txt
+
